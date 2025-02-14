@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: caddy-tailscale
+          images: ghcr.io/kejadlen/caddy-tailscale
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
