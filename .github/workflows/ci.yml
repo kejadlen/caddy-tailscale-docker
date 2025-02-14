@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/caddy-tailscale
+          images: caddy-tailscale
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
